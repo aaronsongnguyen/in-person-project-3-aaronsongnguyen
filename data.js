@@ -1,67 +1,74 @@
-// Week 4 JavaScript Portfolio Project - Data Organization
-// Students will learn to organize their portfolio data using JavaScript objects and arrays
+const showOnly = "all";
+const query = "";
 
-// TODO: Fill in your personal information
+const categoryNames = ["Frontend", "Tools"];
+
 const portfolio = {
-    // Personal information object
     owner: {
-        name: "Your Name Here",        // TODO: Add your name
-        title: "Your Title Here",      // TODO: Add your professional title
-        email: "your.email@example.com", // TODO: Add your email
-        location: "Your City, State",  // TODO: Add your location
-        bio: "Write a brief description about yourself here. What are you passionate about? What are your goals?" // TODO: Add your bio
+        name: "Aaron Nguyen",
+        title: "Aspiring Web Developer & Information Science Student",
+        email: "aaron.nguyen@example.com",
+        location: "Berkeley, CA",
+        bio: "I'm learning to build websites that are clear, accessible, and fun to use. Right now I'm moving from static HTML and CSS into JavaScript, and I'm excited to keep turning ideas into real, data-driven pages."
     },
-    
-    // Skills as an array
-    skills: [
-        "Add your first skill here",   // TODO: Replace with your actual skills
-        "Add your second skill here",  // TODO: Add more skills
-        "Add your third skill here"    // TODO: Students should have at least 5 skills
-        // TODO: Add more skills - aim for 5-7 skills total
-    ],
-    
-    // Projects as array of objects
+
+    skillCategories: {
+        Frontend: [
+            "HTML5 & Semantic Markup",
+            "CSS3 & Responsive Design",
+            "JavaScript Fundamentals"
+        ],
+        Tools: [
+            "Git & GitHub",
+            "VS Code",
+            "Browser DevTools"
+        ]
+    },
+
     projects: [
         {
-            title: "Your First Project",
-            description: "Describe what this project does and why it's interesting",
-            technologies: ["HTML", "CSS"], // Array of technologies used
-            completionDate: "2025-08-15",   // When you completed it
-            featured: true                   // Is this a featured project?
+            title: "Static Portfolio Site",
+            description: "My Week 3 portfolio: semantic HTML, a fixed navigation bar, and a responsive CSS layout.",
+            technologies: ["HTML", "CSS"],
+            completionDate: "2026-09-14",
+            featured: true
         },
         {
-            title: "Your Second Project", 
-            description: "Another project description here",
+            title: "Data-Driven Portfolio",
+            description: "This page! All of the content lives in JavaScript objects and arrays and is rendered with template literals.",
             technologies: ["HTML", "CSS", "JavaScript"],
-            completionDate: "2025-09-01",
+            completionDate: "2026-09-28",
+            featured: true
+        },
+        {
+            title: "Recipe Card Layout",
+            description: "A responsive grid of recipe cards that reflows from three columns down to one on mobile.",
+            technologies: ["HTML", "CSS"],
+            completionDate: "2026-09-07",
+            featured: false
+        },
+        {
+            title: "Tip Calculator JS",
+            description: "A small script that splits a restaurant bill and tip between friends and prints the results to the console.",
+            technologies: ["JavaScript"],
+            completionDate: "2026-09-21",
             featured: false
         }
-        // TODO: Add more projects during class
     ],
-    
-    // Contact and availability information
+
     availability: {
-        freelance: false,    // TODO: Set to true if available for freelance work
-        fullTime: false,     // TODO: Set to true if seeking full-time position
-        partTime: true       // TODO: Set to true if available for part-time work
+        freelance: false,
+        fullTime: false,
+        partTime: true
     }
 };
 
-// Let's explore our data structure in the console
 console.log("=== PORTFOLIO DATA EXPLORER ===");
 console.log("Full portfolio object:", portfolio);
-
-// TODO: During class, we'll add more console.log() statements to explore the data
-// Examples students will try:
-// console.log("Owner name:", portfolio.owner.name);
-// console.log("First skill:", portfolio.skills[0]);
-// console.log("Number of projects:", portfolio.projects.length);
-
-// TODO: Students will learn to access nested properties
-// console.log("Email:", portfolio.owner.email);
-// console.log("Second project:", portfolio.projects[1]);
-// console.log("Available for freelance?", portfolio.availability.freelance);
-
-// TODO: Students will create summary strings using template literals
-// let summary = `${portfolio.owner.name} is a ${portfolio.owner.title} with ${portfolio.skills.length} skills.`;
-// console.log("Summary:", summary);
+console.log("My name:", portfolio.owner.name);
+console.log("Email:", portfolio.owner.email);
+console.log("First Frontend skill:", portfolio.skillCategories.Frontend[0]);
+console.log("Number of projects:", portfolio.projects.length);
+console.log("First project:", portfolio.projects[0]);
+console.log("Second project:", portfolio.projects[1]);
+console.log("Available for freelance?", portfolio.availability.freelance);
